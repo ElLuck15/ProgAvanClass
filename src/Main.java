@@ -18,19 +18,20 @@ public class Main {
         SalidaFunc();
     }
     //Creación de notas
-    public static void CrearNotasFunc(){
-        IntStream.range(0,rd.nextInt(5,10)).forEach(i->notas.add(rd.nextFloat(1.0f,5.0f)));
-    public static void CrearNotasImp(){
+    public static void CrearNotasFunc() {
+        IntStream.range(0, rd.nextInt(5, 10)).forEach(i -> notas.add(rd.nextFloat(1.0f, 5.0f)));
+    }public static void CrearNotasImp(){
         int limite = rd.nextInt(5,10);
         for (int i = 0; i < limite; i++) {
             notas.add(rd.nextFloat(1.0f,7.0f));
         }
     }
     //Procesamiento de notas para agregar a sus respectivas listas dependiendo del filtro
-    public static void ProcesarNotasFunc(){
-        notas.stream().filter(i->i<3.6f).forEach(i->notasmenortres.add(i));
-        notas.stream().filter(i->i>4f).forEach(i->notasmay.add(i));
-        notas.stream().filter(i->i<=4f&&i>=3.6).forEach(i->notasbetw.add(i));
+    public static void ProcesarNotasFunc() {
+            notas.stream().filter(i -> i < 3.6f).forEach(i -> notasmenortres.add(i));
+            notas.stream().filter(i -> i > 4f).forEach(i -> notasmay.add(i));
+            notas.stream().filter(i -> i <= 4f && i >= 3.6).forEach(i -> notasbetw.add(i));
+        }
     public static void ProcesarNotasImp(){
         for(int i = 0; i<notas.size();i++){
             float nota = notas.get(i);
@@ -49,7 +50,6 @@ public class Main {
                 notasbetw.add(nota);
             }
         }
-
     }
     //Impresión en pantalla de notas
     public static void SalidaImp(){
