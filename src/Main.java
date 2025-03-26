@@ -14,14 +14,17 @@ public class Main {
         ProcesarNotasFunc();
         SalidaFunc();
     }
+    //Creación de notas
     public static void CrearNotas(){
         IntStream.range(0,rd.nextInt(5,10)).forEach(i->notas.add(rd.nextFloat(1.0f,5.0f)));
     }
+    //Procesamiento de notas para agregar a sus respectivas listas dependiendo del filtro
     public static void ProcesarNotasFunc(){
         notas.stream().filter(i->i<3.6f).forEach(i->notasmenortres.add(i));
         notas.stream().filter(i->i>4f).forEach(i->notasmay.add(i));
         notas.stream().filter(i->i<=4f&&i>=3.6).forEach(i->notasbetw.add(i));
     }
+    //Impresión en pantalla de notas
     public static void SalidaFunc(){
         System.out.println("Todas las notas");
         notas.stream().forEach(i->System.out.println(i));
