@@ -14,12 +14,14 @@ public class Main {
         ProcesarNotasFunc();
         SalidaFunc();
     }
+    //Creación de notas
     public static void CrearNotas(){
         int limite = rd.nextInt(5,10);
         for (int i = 0; i < limite; i++) {
             notas.add(rd.nextFloat(1.0f,7.0f));
         }
     }
+    //Procesamiento de notas para agregar a sus respectivas listas dependiendo del filtro
     public static void ProcesarNotasFunc(){
         for(int i = 0; i<notas.size();i++){
             float nota = notas.get(i);
@@ -40,6 +42,7 @@ public class Main {
         }
 
     }
+    //Impresión en pantalla de notas
     public static void SalidaFunc(){
         System.out.println("Todas las notas");
         for( var i : notas ){
