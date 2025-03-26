@@ -10,12 +10,12 @@ public class Main {
     static List<Float> notasmay = new ArrayList<Float>();
     static List<Float> notasbetw = new ArrayList<Float>();
     public static void main(String[] args) {
-        CrearNotas();
+        CrearNotasFunc();
         ProcesarNotasFunc();
         SalidaFunc();
     }
     //Creación de notas
-    public static void CrearNotas(){
+    public static void CrearNotasFunc(){
         IntStream.range(0,rd.nextInt(5,10)).forEach(i->notas.add(rd.nextFloat(1.0f,5.0f)));
     }
     //Procesamiento de notas para agregar a sus respectivas listas dependiendo del filtro
