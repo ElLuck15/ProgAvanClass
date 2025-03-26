@@ -15,7 +15,10 @@ public class Main {
         SalidaFunc();
     }
     public static void CrearNotas(){
-        IntStream.range(0,rd.nextInt(5,10)).forEach(i->notas.add(rd.nextFloat(1.0f,7.0f)));
+        int limite = rd.nextInt(5,10);
+        for (int i = 0; i < limite; i++) {
+            notas.add(rd.nextFloat(1.0f,7.0f));
+        }
     }
     public static void ProcesarNotasFunc(){
         for(int i = 0; i<notas.size();i++){
