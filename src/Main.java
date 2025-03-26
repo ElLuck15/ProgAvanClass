@@ -52,7 +52,7 @@ public class Main {
         }
     }
     //Impresión en pantalla de notas
-    public static void SalidaImp(){
+    public static void SalidaFunc(){
         System.out.println("Todas las notas");
         notas.stream().forEach(i->System.out.println(i));
         System.out.println("Notas menores a 3.6");
