@@ -62,4 +62,22 @@ public class Main {
         System.out.println("Notas entre 3.6 y 4");
         notasbetw.stream().forEach(i->System.out.println(i));
     }
+    public static void SalidaImp(){
+        System.out.println("Todas las notas");
+        for( var i : notas ){
+            System.out.println(i);
+        }
+        System.out.println("Notas menores a 3.6");
+        for( var i : notasmenortres ){
+            System.out.println(i);
+        }
+        System.out.println("Notas mayores a 4");
+        for( var i : notasmay ){
+            System.out.println(i);
+        }
+        System.out.println("Notas entre 3.6 y 4");
+        for( var i : notasbetw ){
+            System.out.println(i);
+        }
+    }
 }
