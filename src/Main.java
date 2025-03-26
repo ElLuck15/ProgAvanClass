@@ -10,19 +10,19 @@ public class Main {
     static List<Float> notasmay = new ArrayList<Float>();
     static List<Float> notasbetw = new ArrayList<Float>();
     public static void main(String[] args) {
-        CrearNotas();
-        ProcesarNotasFunc();
-        SalidaFunc();
+        CrearNotasImp();
+        ProcesarNotasImp();
+        SalidaImp();
     }
     //Creación de notas
-    public static void CrearNotas(){
+    public static void CrearNotasImp(){
         int limite = rd.nextInt(5,10);
         for (int i = 0; i < limite; i++) {
             notas.add(rd.nextFloat(1.0f,7.0f));
         }
     }
     //Procesamiento de notas para agregar a sus respectivas listas dependiendo del filtro
-    public static void ProcesarNotasFunc(){
+    public static void ProcesarNotasImp(){
         for(int i = 0; i<notas.size();i++){
             float nota = notas.get(i);
             if(i<3.6f){
@@ -43,7 +43,7 @@ public class Main {
 
     }
     //Impresión en pantalla de notas
-    public static void SalidaFunc(){
+    public static void SalidaImp(){
         System.out.println("Todas las notas");
         for( var i : notas ){
             System.out.println(i);
